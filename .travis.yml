@@ -5,3 +5,13 @@ install:
   - npm install
 script:
   - npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist/
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: false
+  name: xiayutian3
+  email: 1127071993@qq.com
+  on:
+    branch: master
